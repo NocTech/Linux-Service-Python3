@@ -1,10 +1,11 @@
 [Unit]
-Description=My Python Script
-After=network.target
+Description=My Python Script  # Description of the service
+
+After=network.target  # Start the service after the network is up
 
 [Service]
-ExecStart=/usr/bin/python3 /path/to/your/script.py
-WorkingDirectory=/path/to/your/script/directory
+ExecStart=/usr/bin/python3 /path/to/your/script.py  # Command to execute when starting the service
+WorkingDirectory=/path/to/your/script/directory  # Working directory for the service
 
 [Install]
-WantedBy=default.target
+WantedBy=default.target  # Activate the service when enabling the default target
